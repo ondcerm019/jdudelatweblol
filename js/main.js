@@ -18,4 +18,13 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 
+
+    const parallax = document.querySelector('.main-parallax');
+
+    window.addEventListener('scroll', function() {
+        let scrollPosition = window.scrollY;
+        parallax.style.transform = `translateY(${scrollPosition * 0.75}px)`;
+    })
+
+
 });
