@@ -2,11 +2,19 @@ document.addEventListener("DOMContentLoaded", () => {
     console.log("Stránka načtena!");
 
 
-    const navtoggle = document.getElementById('navToggle');
-    const navlist = document.getElementById('navList');
+    const navtoggle = document.querySelector('.nav-toggle');
+    const navlist = document.querySelector('.nav-list');
 
     navtoggle.addEventListener('click', function() {
-        navlist.classList.toggle('sm-nav-show');
+
+        
+        if (navlist.style.maxHeight) {
+            navlist.style.maxHeight = null;
+        } else {
+            navlist.style.maxHeight = navlist.scrollHeight + "px";
+        }
+
+        
     });
 
 
