@@ -6,7 +6,7 @@ class BeeParallax extends HTMLElement {
       const top = this.getAttribute("top") || "0";
       const side = this.getAttribute("side") || "0";
       const parallaxSpeed = this.getAttribute("parallax-speed") || "0.5";
-      const shiftSpeed = this.getAttribute("shift-speed") || "0.5";
+      const shiftSpeed = this.getAttribute("shift-speed") || "0";
       const opacity = this.getAttribute("opacity") || "1";
       const zPos = this.getAttribute("z-position") || "front";
 

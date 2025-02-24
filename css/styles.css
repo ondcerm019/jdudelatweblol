@@ -4,14 +4,14 @@ body {
     font-family: 'Roboto', sans-serif; 
     font-size: 16px;
     line-height: 1.5;
-    background-color: #f4f4f4;
+    background-color: white;
     color: wheat;
 }
 
 main {
     position: relative;
+    overflow: hidden;
 }
-
 
 
 
@@ -25,6 +25,10 @@ main {
 .main-content {
     margin-right: 20px;
     margin-left: 20px;
+
+    padding-bottom: 40px;
+
+    display: grid;
 }
 
 .main-background {
@@ -51,25 +55,61 @@ main {
 
 
 
-
-
-
-/* dark mode / light mode color scheme ??? */
-
-
-
+header {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
 
 
 nav {
-    background-color: #333;
+    background-color: #936c2a;
     padding: 10px 0;
-    position: sticky;
-    top: 0;
     color: white;
     width: 100%;
-
-    z-index: 999;
 }
+
+
+footer {
+    background-color: #936c2a;
+    color: white;
+    width: 100%;
+    padding: 20px 0 20px 0;
+    
+}
+
+footer * {
+    margin: 0;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-inner {
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    gap: 10px
+}
+
+.footer-section {
+    margin-left: 20px;
+}
+
+
+.copyright {
+    padding-top: 10px;
+}
+
+.socials {
+    display: flex;
+    flex-direction: row;
+    gap: 4px;
+}
+
+
 
 
 
@@ -94,7 +134,7 @@ nav {
     font-size: 18px;
     padding: 10px 20px;
     display: inline-block;
-    background-color: #333;
+    
     border-radius: 8px;
     transition: background-color 0.3s ease;
     cursor: pointer;
@@ -125,7 +165,6 @@ nav {
     flex-direction: column;
     width: 50px;
     height: 50px;
-    background: #333;
     color: white;
     font-size: 24px;
     border-radius: 8px;
@@ -136,7 +175,7 @@ nav {
 }
 
 .nav-toggle:hover {
-    background-color: #555;
+    background-color: rgb(24, 12, 1);
 }
 
 .nav-toggle span {
@@ -172,6 +211,7 @@ nav {
 .bee-parallax {
     position: absolute;
     /* z-index: -5 or 5 */
+    display: none;
 }
 
 
@@ -188,6 +228,21 @@ nav {
     font-size: 96px;
     margin: 0;
 }
+
+
+
+
+.bee-table {
+    font-size: 12px;
+    border-collapse: collapse;
+}
+
+.bee-table, .bee-table th, .bee-table td {
+    border: 1px solid black;
+}
+
+
+
 
 
 
@@ -215,6 +270,19 @@ nav {
 
     .main-parallax {
         opacity: var(--main-parallax-opacity, 1);
+    }
+
+    .bee-parallax {
+        display: inherit;
+    }
+
+    .footer-inner {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr;
+    }
+
+    .bee-table {
+        font-size: inherit;
     }
 
     
