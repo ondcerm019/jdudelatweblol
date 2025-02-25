@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif; 
     font-size: 16px;
     line-height: 1.5;
-    background-color: #F4C766;
+    background-color: #D98C3D;
     color: #3D2B1F;
 }
 
@@ -131,6 +131,7 @@ footer * {
     margin: 0;
     padding: 0;
     padding-top: 10px;
+    padding-bottom: 10px;
 }
 
 .nav-list li {
@@ -339,6 +340,10 @@ main ol li::before {
 
 
 @media (min-width: 768px) {
+    body {
+        background-color: #F4C766;
+    }
+
     .sm-nav-hidden  {
         max-height: inherit;
         pointer-events: inherit;
