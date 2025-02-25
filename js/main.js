@@ -1,4 +1,3 @@
-
 class BeeParallax extends HTMLElement {
     connectedCallback() {
       const size = this.getAttribute("size") || "100";
@@ -6,7 +5,7 @@ class BeeParallax extends HTMLElement {
       const top = this.getAttribute("top") || "0";
       const side = this.getAttribute("side") || "0";
       const parallaxSpeed = this.getAttribute("parallax-speed") || "0.5";
-      const shiftSpeed = this.getAttribute("shift-speed") || "0";
+      const shiftSpeed = this.getAttribute("shift-speed") || "0.5";
       const opacity = this.getAttribute("opacity") || "1";
       const zPos = this.getAttribute("z-position") || "front";
 
@@ -32,6 +31,24 @@ document.addEventListener("DOMContentLoaded", () => {
         parallaxSpeeds.set(b, parseFloat(b.getAttribute("parallax-speed")) || 0);
         shiftSpeeds.set(b, parseFloat(b.getAttribute("shift-speed")) || 0);
     });
+
+
+    const beeWing1 = document.getElementById("shape04");
+    const beeWing2 = document.getElementById("shape05");
+
+    function beeWingFlutter() {
+
+        if (beeWing1.style.display === "none" || beeWing1.style.display === "") {
+            beeWing1.style.display = "inherit";
+            beeWing2.style.display = "none";
+        } else {
+            beeWing1.style.display = "none";
+            beeWing2.style.display = "inherit";
+        }
+    }
+    setInterval(beeWingFlutter, 100)
+
+
 
 
     
