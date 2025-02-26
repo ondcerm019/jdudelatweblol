@@ -4,7 +4,7 @@ body {
     font-family: 'Roboto', sans-serif; 
     font-size: 16px;
     line-height: 1.5;
-    background-color: #D98C3D;
+    background-color: #9a6e3a;
     color: #3D2B1F;
 }
 
@@ -71,7 +71,7 @@ nav {
 
 
 footer {
-    background-color: #D98C3D;
+    background-color: #9a6e3a;
     color: white;
     width: 100%;
     padding: 20px 0 20px 0;
@@ -101,7 +101,7 @@ footer * {
 
 .copyright {
     padding-top: 10px;
-    color: #86592D;
+    color: #63411c;
 }
 
 .socials {
@@ -355,6 +355,7 @@ main ol li::before {
     
     .nav-list ul {
         padding-top: 0;
+        padding-bottom: 0;
     }
 
     .nav-list li {
