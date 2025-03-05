@@ -413,15 +413,14 @@ main ol li::before {
 
 .honeycomb {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: left;
+    flex-direction: column;
+    justify-content: center;
     align-items: center;
-    column-gap: 6px;
-    row-gap: 90px;
 
-    margin-top: 85px;
-    margin-bottom: 85px;
+    row-gap: 6px;
+
+    padding-top: 20px;
+    padding-bottom: 20px;
 
     position: relative;
 }
@@ -432,13 +431,13 @@ main ol li::before {
 
 .hex-hitbox {
     position: relative;
-    width: 290px;
-    height: 167px;
+    width: 167px;
+    height: 290px;
 }
 
 .hex {
     background-color: #3d1c0d;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    clip-path: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -446,14 +445,14 @@ main ol li::before {
 
 .hex-outer {
     position: absolute;
-    top: -83px;
-    width: 290px;
-    height: 333.5px;
+    left: -83px;
+    width: 333.5px;
+    height: 290px;
 }
 
 .hex-inner {
-    width: 270px;
-    height: 310.5px;
+    width: 310.5px;
+    height: 270px;
 }
 
 .hex img {
@@ -474,7 +473,45 @@ main ol li::before {
 
 
 
+@media (min-width: 480px) {
 
+    .honeycomb {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+
+        column-gap: 6px;
+        row-gap: 90px;
+
+        padding-top: 120px;
+        padding-bottom: 75px;
+    }
+
+    .hex {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .hex-hitbox {
+        width: 290px;
+        height: 167px;
+    }
+
+    .hex-outer {
+        top: -83px;
+        left: 0;
+        width: 290px;
+        height: 333.5px;
+    }
+    
+    .hex-inner {
+        width: 270px;
+        height: 310.5px;
+    }
+
+    
+
+
+}
 
 
 @media (min-width: 768px) {

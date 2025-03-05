@@ -11,10 +11,17 @@ document.addEventListener("DOMContentLoaded", () => {
     function updateHexagonRows() {
         const hexagons = document.querySelectorAll('.honeycomb .hex-hitbox');
         const honeycomb = document.querySelector('.honeycomb');
+
         if (!honeycomb || hexagons.length === 0) return;
 
         hexagons.forEach(hex => hex.classList.remove('even-row-shift'));
 
+
+        if (window.innerWidth < 480) {
+            honeycomb.style.left = "0";
+            return;
+        };
+        
         let previousTop = null;
         let rowIndex = 0;
         let rows = new Map(); // Store row top positions
