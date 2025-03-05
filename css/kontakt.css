@@ -1,0 +1,66 @@
+.main-content {
+    padding-top: 40px;
+}
+
+
+.contact-form {
+    background-color: #F3D996;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: auto;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+fieldset {
+    border: 2px solid #86592D;
+    border-radius: 8px;
+    padding: 15px;
+}
+
+legend {
+    background: #7A4E2D;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+    color: #3D2B1F;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #86592D;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #F8E4A8;
+    color: #3D2B1F;
+    resize: none;
+}
+
+button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #7A4E2D;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #654220;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}

@@ -1,9 +1,14 @@
+html {
+    overflow-y: scroll;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif; 
     font-size: 16px;
     line-height: 1.5;
+    
     background-color: #9a6e3a;
     color: #3D2B1F;
 }
@@ -11,6 +16,8 @@ body {
 main {
     position: relative;
     overflow: hidden;
+    background-color: #F4C766;
+    z-index: 0;
 }
 
 
@@ -483,6 +490,22 @@ main ol li::before {
 }
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 @media (min-width: 480px) {
 
     .honeycomb {
@@ -525,9 +548,6 @@ main ol li::before {
 
 
 @media (min-width: 768px) {
-    body {
-        background-color: #F4C766;
-    }
 
     .sm-nav-hidden  {
         max-height: inherit;
