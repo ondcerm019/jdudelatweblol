@@ -149,31 +149,28 @@ footer * {
     padding-bottom: 10px;
 }
 
-.nav-list li {
-    margin: 0 8px;
-}
-
 .nav-list li a {
     text-decoration: none;
     color: white;
     font-size: 18px;
-    padding: 10px 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 28px;
+    padding-right: 28px;
     display: inline-block;
     
-    border-radius: 8px;
     transition: background-color 0.3s ease;
     cursor: pointer;
 
     display: flex;
     align-items: center;
 
-
 }
 
-.nav-list li a:hover {
+.nav-list li a:hover,
+.nav-list li .page-active {
     background-color: #654220;
 }
-
 
 
 .nav-toggle {
@@ -507,54 +504,15 @@ main ol li::before {
 
 
 
-
-
-
-
-
-
-@media (min-width: 480px) {
-
-    .honeycomb {
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: left;
-
-        column-gap: 6px;
-        row-gap: 90px;
-
-        padding-top: 110px;
-        padding-bottom: 75px;
-    }
-
-    .hex {
-        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    }
-
-    .hex-hitbox {
-        width: 290px;
-        height: 167px;
-    }
-
-    .hex-outer {
-        top: -83px;
-        left: 0;
-        width: 290px;
-        height: 333.5px;
-    }
-    
-    .hex-inner {
-        width: 270px;
-        height: 310.5px;
-    }
-
-    
-
-
-}
-
-
 @media (min-width: 768px) {
+    nav {
+        padding: 0;
+    }
+
+    .nav-list li a {
+        padding-top: 20px;
+        padding-bottom: 20px;
+    }
 
     .sm-nav-hidden  {
         max-height: inherit;
@@ -623,7 +581,45 @@ main ol li::before {
 
 
 
+@media (min-width: 480px) {
 
+    .honeycomb {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: left;
+
+        column-gap: 6px;
+        row-gap: 90px;
+
+        padding-top: 110px;
+        padding-bottom: 75px;
+    }
+
+    .hex {
+        clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    }
+
+    .hex-hitbox {
+        width: 290px;
+        height: 167px;
+    }
+
+    .hex-outer {
+        top: -83px;
+        left: 0;
+        width: 290px;
+        height: 333.5px;
+    }
+    
+    .hex-inner {
+        width: 270px;
+        height: 310.5px;
+    }
+
+    
+
+
+}
 
 
 
