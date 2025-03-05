@@ -448,6 +448,7 @@ main ol li::before {
     display: flex;
     justify-content: center;
     align-items: center;
+    transition: all 0.2s ease-in-out;
 }
 
 .hex-outer {
@@ -455,6 +456,12 @@ main ol li::before {
     left: -83px;
     width: 333.5px;
     height: 290px;
+    z-index: 0;
+}
+
+.hex-outer:hover {
+    transform: scale(1.2);
+    z-index: 1;
 }
 
 .hex-inner {

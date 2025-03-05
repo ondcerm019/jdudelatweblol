@@ -16,21 +16,20 @@ document.addEventListener("DOMContentLoaded", () => {
 
         hexagons.forEach(hex => hex.classList.remove('even-row-shift'));
 
-
         if (window.innerWidth < 480) {
             honeycomb.style.left = "0";
             return;
         };
-        
+
         let previousTop = null;
         let rowIndex = 0;
-        let rows = new Map(); // Store row top positions
+        let rows = new Map();
 
         hexagons.forEach((hex, index) => {
             const currentTop = hex.getBoundingClientRect().top;
 
             if (previousTop !== null && currentTop > previousTop) {
-                rowIndex++; // New row detected
+                rowIndex++;
             }
 
             if (!rows.has(currentTop)) {
@@ -38,7 +37,6 @@ document.addEventListener("DOMContentLoaded", () => {
             }
             rows.get(currentTop).push(hex);
 
-            // Apply class to first item of even rows
             if (rowIndex % 2 === 1 && (index === 0 || hexagons[index - 1].getBoundingClientRect().top < currentTop)) {
                 hex.classList.add('even-row-shift');
             }
@@ -46,7 +44,6 @@ document.addEventListener("DOMContentLoaded", () => {
             previousTop = currentTop;
         });
 
-        // Wait for layout updates before measuring
         requestAnimationFrame(() => {
             let maxRowWidth = 0;
             rows.forEach(hexes => {
@@ -56,7 +53,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 let firstLeft = firstHex.getBoundingClientRect().left;
                 let lastRight = lastHex.getBoundingClientRect().right;
 
-                // If the first element has even-row-shift, include its margin
                 if (firstHex.classList.contains('even-row-shift')) {
                     firstLeft -= shiftMargin;
                 }
@@ -64,14 +60,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 maxRowWidth = Math.max(maxRowWidth, lastRight - firstLeft);
             });
 
-            // Center the honeycomb
             const honeycombWidth = honeycomb.getBoundingClientRect().width;
             const offset = (honeycombWidth - maxRowWidth) / 2;
             honeycomb.style.left = `${offset}px`;
         });
     }
 
-    // Run on load and resize
     window.addEventListener('load', updateHexagonRows);
     window.addEventListener('resize', updateHexagonRows);
 });
