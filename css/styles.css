@@ -5,7 +5,7 @@ html {
 body {
     margin: 0;
     padding: 0;
-    font-family: 'Roboto', sans-serif; 
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
     line-height: 1.5;
     
@@ -361,6 +361,41 @@ main ol li::before {
 
 
 
+/* main anchor */
+
+main a {
+    all: unset;
+    text-decoration: none;
+    cursor: pointer;
+    font-style: italic;
+    color: #D35400;
+}
+
+main a:visited {
+    color: #97321b;
+}
+
+main a:hover {
+    color: #FF9800;
+}
+
+main a:active {
+    color: #ffb800;
+}
+
+/* external */
+main a[href^="http"]::after {
+    content: "\2197";
+    font-size: 0.65em;
+    vertical-align: super;
+}
+
+
+
+
+
+
+
 .index-layout {
     grid-template-columns: 1fr 1fr; 
     grid-template-rows: auto auto auto auto; 
@@ -492,9 +527,6 @@ main ol li::before {
 .h-p-3 {
     background-image: url('../files/honeycomb_2.jpg');
 }
-
-
-
 
 
 

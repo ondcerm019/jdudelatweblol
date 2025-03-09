@@ -3,25 +3,23 @@
 }
 
 
+
 .contact-form {
-    background-color: #F3D996;
-    padding: 20px;
-    border-radius: 10px;
     max-width: 500px;
     margin: auto;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
 fieldset {
+    padding: 10px;
     border: 2px solid #86592D;
     border-radius: 8px;
-    padding: 15px;
+    margin: 0;
 }
 
 legend {
     background: #7A4E2D;
     color: white;
-    padding: 5px 10px;
+    padding: 6px 12px;
     border-radius: 5px;
     font-weight: bold;
 }
@@ -29,22 +27,33 @@ legend {
 label {
     display: block;
     margin: 10px 0 5px;
-    font-weight: bold;
     color: #3D2B1F;
+    font-weight: bold;
 }
+
 
 input, textarea {
     width: 100%;
     padding: 10px;
     border: 1px solid #86592D;
     border-radius: 5px;
-    font-size: 16px;
     background-color: #F8E4A8;
     color: #3D2B1F;
-    resize: none;
+    font-size: 16px;
+    outline-color: #3D2B1F;
+    box-sizing: border-box;
 }
 
-button {
+input {
+    margin-bottom: 6px;
+}
+
+textarea {
+    resize: vertical;
+    overflow-y: hidden;
+}
+
+.submit-btn {
     margin-top: 10px;
     padding: 10px 15px;
     background-color: #7A4E2D;
@@ -52,7 +61,6 @@ button {
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    font-size: 16px;
 }
 
 button:hover {
@@ -61,6 +69,4 @@ button:hover {
 
 .error {
     color: red;
-    font-size: 14px;
-    margin-top: 5px;
 }

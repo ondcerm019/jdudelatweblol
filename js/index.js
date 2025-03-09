@@ -22,6 +22,13 @@ class BeeParallax extends HTMLElement {
 
 
 document.addEventListener("DOMContentLoaded", () => {
+    //scroll reset on reload
+    window.onbeforeunload = function () {
+        window.scrollTo(0, 0);
+    }
+
+
+
     customElements.define("bee-parallax", BeeParallax);
 
     const parallaxbees = document.querySelectorAll("bee-parallax div");
